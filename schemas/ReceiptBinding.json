@@ -1,0 +1,49 @@
+{
+  "$id": "https://spec.x402.dev/aar/v0.1/ReceiptBinding.json",
+  "type": "object",
+  "required": [
+    "type",
+    "offerId",
+    "quoteId",
+    "chain",
+    "asset",
+    "amountOut",
+    "payTo",
+    "txHash"
+  ],
+  "properties": {
+    "type": {
+      "const": "x402-aar/v0.1"
+    },
+    "offerId": {
+      "type": "string"
+    },
+    "quoteId": {
+      "type": "string"
+    },
+    "chain": {
+      "type": "string"
+    },
+    "asset": {
+      "type": "string"
+    },
+    "amountOut": {
+      "type": "string"
+    },
+    "payTo": {
+      "type": "string"
+    },
+    "txHash": {
+      "type": "string"
+    },
+    "blockNumber": {
+      "type": "integer"
+    },
+    "settlementProof": {
+      "type": "string"
+    },
+    "payer": {
+      "type": "string"
+    }
+  }
+}

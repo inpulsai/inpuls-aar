@@ -1,0 +1,52 @@
+{
+  "$id": "https://spec.x402.dev/aar/v0.1/RouteRequest.json",
+  "type": "object",
+  "required": [
+    "spec",
+    "offerId",
+    "have",
+    "payTo"
+  ],
+  "properties": {
+    "spec": {
+      "const": "x402-aar/v0.1"
+    },
+    "offerId": {
+      "type": "string"
+    },
+    "merchant": {
+      "type": "object"
+    },
+    "have": {
+      "type": "object",
+      "required": [
+        "chain",
+        "asset",
+        "amountInMax"
+      ],
+      "properties": {
+        "chain": {
+          "type": "string"
+        },
+        "asset": {
+          "type": "string"
+        },
+        "amountInMax": {
+          "type": "string"
+        }
+      }
+    },
+    "constraints": {
+      "type": "object"
+    },
+    "payer": {
+      "type": "string"
+    },
+    "payTo": {
+      "type": "string"
+    },
+    "extras": {
+      "type": "object"
+    }
+  }
+}

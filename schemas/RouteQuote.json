@@ -1,0 +1,66 @@
+{
+  "$id": "https://spec.x402.dev/aar/v0.1/RouteQuote.json",
+  "type": "object",
+  "required": [
+    "spec",
+    "quoteId",
+    "offerId",
+    "route",
+    "limits",
+    "facilitator",
+    "signature"
+  ],
+  "properties": {
+    "spec": {
+      "const": "x402-aar/v0.1"
+    },
+    "quoteId": {
+      "type": "string"
+    },
+    "offerId": {
+      "type": "string"
+    },
+    "route": {
+      "type": "object",
+      "required": [
+        "chain",
+        "amountIn",
+        "amountOut",
+        "assetOut",
+        "payTo"
+      ],
+      "properties": {
+        "chain": {
+          "type": "string"
+        },
+        "path": {
+          "type": "array"
+        },
+        "executionData": {
+          "type": "string"
+        },
+        "amountIn": {
+          "type": "string"
+        },
+        "amountOut": {
+          "type": "string"
+        },
+        "assetOut": {
+          "type": "string"
+        },
+        "payTo": {
+          "type": "string"
+        }
+      }
+    },
+    "limits": {
+      "type": "object"
+    },
+    "facilitator": {
+      "type": "object"
+    },
+    "signature": {
+      "type": "object"
+    }
+  }
+}
